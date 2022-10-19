@@ -12,7 +12,7 @@ const app = express();
 app.use( cors() );
 
 // Carpeta pública
-app.use(express.static('public'));
+app.use( express.static('public') );
 
 // Lectura y parseo del body
 app.use( express.json() );

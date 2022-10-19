@@ -11,25 +11,27 @@
 
     <div id="buttonDiv"></div> 
 
+
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
 
       var url = 'http://localhost:3000/api/login/google';
+
         function handleCredentialResponse(response) {
           // console.log("Encoded JWT ID token: " + response.credential);
-          fetch(url, {
+          fetch( url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: response.credential })
           })
-          .then( resp => resp.json())
-          .then( data => console.log('Nuestro server', data))
-          .catch(console.log)
+          .then( resp => resp.json() )
+          .then( data => console.log( 'Nuestro server', data ) )
+          .catch( console.log )
         }
 
         window.onload = function () {
           google.accounts.id.initialize({
-            client_id: '947906312261-vpt0dcod0igjp9ug82beepmve2aok6p2.apps.googleusercontent.com',
+            client_id: '421331086193-lljllammp0789dpctit8idesci37mfu5.apps.googleusercontent.com',
             callback: handleCredentialResponse
           });
 
@@ -42,6 +44,7 @@
         }
     </script>
     
+
     
 </body>
 </html>

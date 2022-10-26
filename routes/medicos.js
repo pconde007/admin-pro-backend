@@ -1,6 +1,6 @@
 /*
     Medicos
-    ruta: '/api/medicos'
+    ruta: '/api/medico'
 */
 const { Router } = require('express');
 const { check } = require('express-validator');
